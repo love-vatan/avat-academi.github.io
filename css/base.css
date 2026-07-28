@@ -1,0 +1,351 @@
+/* ======================================================
+   AVAT Drone Academy
+   Design System
+====================================================== */
+
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+/* ======================================================
+   ROOT VARIABLES
+====================================================== */
+
+:root{
+
+--primary:#00A3FF;
+--primary-dark:#0057FF;
+
+--accent:#00FFD1;
+
+--bg:#030712;
+--surface:#0F172A;
+
+--surface-2:#111C31;
+
+--white:#FFFFFF;
+
+--text:#FFFFFF;
+--text-secondary:#94A3B8;
+
+--border:
+rgba(255,255,255,.08);
+
+--glass:
+rgba(255,255,255,.05);
+
+--glass-hover:
+rgba(255,255,255,.08);
+
+--shadow:
+0 10px 40px rgba(0,163,255,.15);
+
+--shadow-lg:
+0 20px 60px rgba(0,163,255,.25);
+
+--radius-sm:12px;
+--radius-md:20px;
+--radius-lg:28px;
+
+--transition:
+all .35s ease;
+
+--container:
+1280px;
+
+}
+
+/* ======================================================
+   LIGHT MODE
+====================================================== */
+
+body.light{
+
+--bg:#F7FAFC;
+
+--surface:#FFFFFF;
+
+--surface-2:#F1F5F9;
+
+--text:#0F172A;
+
+--text-secondary:#475569;
+
+--glass:
+rgba(255,255,255,.75);
+
+--glass-hover:
+rgba(255,255,255,.95);
+
+--border:
+rgba(15,23,42,.08);
+
+}
+
+/* ======================================================
+   RESET
+====================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:'Vazirmatn',sans-serif;
+
+background:var(--bg);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+line-height:1.8;
+
+transition:var(--transition);
+
+}
+
+/* ======================================================
+   GLOBAL
+====================================================== */
+
+img{
+
+max-width:100%;
+
+display:block;
+
+}
+
+a{
+
+text-decoration:none;
+
+color:inherit;
+
+}
+
+ul{
+
+list-style:none;
+
+}
+
+button{
+
+font-family:inherit;
+
+border:none;
+
+outline:none;
+
+background:none;
+
+cursor:pointer;
+
+}
+
+/* ======================================================
+   TYPOGRAPHY
+====================================================== */
+
+h1{
+
+font-size:72px;
+
+line-height:1.1;
+
+font-weight:800;
+
+}
+
+h2{
+
+font-size:56px;
+
+font-weight:700;
+
+line-height:1.2;
+
+}
+
+h3{
+
+font-size:32px;
+
+font-weight:600;
+
+}
+
+p{
+
+font-size:18px;
+
+color:var(--text-secondary);
+
+}
+
+/* ======================================================
+   CONTAINER
+====================================================== */
+
+.container{
+
+width:min(
+100% - 40px,
+var(--container)
+);
+
+margin-inline:auto;
+
+}
+
+/* ======================================================
+   SECTION
+====================================================== */
+
+section{
+
+padding:120px 0;
+
+position:relative;
+
+}
+
+/* ======================================================
+   GLASS SYSTEM
+====================================================== */
+
+.glass{
+
+background:var(--glass);
+
+backdrop-filter:blur(24px);
+
+-webkit-backdrop-filter:blur(24px);
+
+border:1px solid var(--border);
+
+box-shadow:var(--shadow);
+
+}
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:10px;
+
+padding:16px 28px;
+
+border-radius:16px;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:var(--transition);
+
+}
+
+.btn-primary{
+
+background:linear-gradient(
+135deg,
+var(--primary),
+var(--primary-dark)
+);
+
+color:#fff;
+
+box-shadow:var(--shadow);
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-4px);
+
+box-shadow:var(--shadow-lg);
+
+}
+
+.btn-secondary{
+
+background:var(--glass);
+
+backdrop-filter:blur(16px);
+
+border:1px solid var(--border);
+
+}
+
+.btn-secondary:hover{
+
+background:var(--glass-hover);
+
+}
+
+/* ======================================================
+   TITLE
+====================================================== */
+
+.section-title{
+
+text-align:center;
+
+max-width:720px;
+
+margin:0 auto 80px;
+text-align: center;
+
+
+}
+
+.section-title h2{
+
+margin-bottom:20px;
+text-align: center;
+
+}
+
+/* ======================================================
+   CUSTOM SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:var(--surface);
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:50px;
+
+}

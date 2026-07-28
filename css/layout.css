@@ -1,0 +1,686 @@
+/* ======================================================
+   HEADER
+====================================================== */
+
+.header{
+
+position:fixed;
+
+top:24px;
+
+left:0;
+
+width:100%;
+
+z-index:9999;
+
+}
+
+.navbar{
+
+height:88px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 24px;
+
+border-radius:24px;
+
+background:
+rgba(15,23,42,.55);
+
+backdrop-filter:blur(24px);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:800;
+
+letter-spacing:2px;
+
+}
+
+.menu{
+
+display:flex;
+
+gap:40px;
+
+}
+
+.menu a{
+
+transition:.3s;
+
+}
+
+.menu a:hover{
+
+color:var(--primary);
+
+}
+
+.nav-actions{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+}
+
+/* ======================================================
+   THEME BUTTON
+====================================================== */
+
+#theme-toggle{
+
+width:48px;
+height:48px;
+
+border-radius:50%;
+
+background:var(--glass);
+
+backdrop-filter:blur(20px);
+
+border:1px solid var(--border);
+
+}
+
+/* ======================================================
+   MOBILE MENU
+====================================================== */
+
+.mobile-menu{
+
+position:fixed;
+
+top:0;
+right:-100%;
+
+width:320px;
+height:100vh;
+
+padding:120px 30px;
+
+background:var(--surface);
+
+transition:.4s;
+
+z-index:10000;
+
+}
+
+.mobile-menu.active{
+
+right:0;
+
+}
+
+.mobile-menu a{
+
+display:block;
+
+padding:14px 0;
+
+}
+
+/* ======================================================
+   HERO
+====================================================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+overflow:hidden;
+
+}
+
+.hero-grid{
+
+display:grid;
+
+grid-template-columns:
+5fr 7fr;
+
+align-items:center;
+
+gap:60px;
+
+}
+
+.hero-badge{
+
+display:inline-flex;
+
+padding:10px 18px;
+
+border-radius:999px;
+
+background:var(--glass);
+
+border:1px solid var(--border);
+
+margin-bottom:24px;
+
+}
+
+.hero h1{
+
+margin-bottom:24px;
+
+}
+
+.hero p{
+
+max-width:600px;
+
+margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:16px;
+
+margin-bottom:50px;
+
+}
+
+.hero-stats{
+
+display:flex;
+
+gap:40px;
+
+}
+
+.hero-stats strong{
+
+display:block;
+
+font-size:32px;
+
+color:var(--primary);
+
+}
+
+.hero-visual{
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.hero-visual img{
+
+width:700px;
+
+max-width:100%;
+
+z-index:2;
+
+}
+
+/* ======================================================
+   RADAR
+====================================================== */
+
+.radar{
+
+position:absolute;
+
+width:550px;
+height:550px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+circle,
+rgba(0,163,255,.15),
+transparent 70%
+);
+
+filter:blur(20px);
+
+}
+
+/* ======================================================
+   TRUST BAR
+====================================================== */
+
+.trust-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:24px;
+
+padding:40px;
+
+border-radius:28px;
+
+background:var(--glass);
+
+backdrop-filter:blur(24px);
+
+border:1px solid var(--border);
+
+}
+
+.trust-grid div{
+
+text-align:center;
+
+}
+
+.trust-grid h3{
+
+color:var(--primary);
+
+margin-bottom:10px;
+
+}
+
+/* ======================================================
+   FEATURES
+====================================================== */
+
+.features-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:24px;
+
+}
+
+.feature-card{
+
+padding:40px;
+
+border-radius:28px;
+
+background:var(--glass);
+
+backdrop-filter:blur(24px);
+
+border:1px solid var(--border);
+
+transition:.35s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.feature-icon{
+
+width:70px;
+height:70px;
+
+border-radius:20px;
+
+
+
+margin-bottom:24px;
+
+}
+
+/* ======================================================
+   JOURNEY
+====================================================== */
+
+.timeline{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-top:80px;
+
+position:relative;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+top:18px;
+
+right:0;
+
+width:100%;
+height:2px;
+
+background:var(--primary);
+
+}
+
+.step{
+
+position:relative;
+
+background:var(--bg);
+
+padding-top:50px;
+
+z-index:2;
+
+}
+
+.step::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+right:50%;
+
+transform:translateX(50%);
+
+width:38px;
+height:38px;
+
+border-radius:50%;
+
+background:var(--primary);
+
+}
+
+/* ======================================================
+   CATEGORIES
+====================================================== */
+
+.categories-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:24px;
+
+}
+
+.category-card{
+
+height:260px;
+
+border-radius:28px;
+
+overflow:hidden;
+
+background:var(--surface);
+
+display:flex;
+
+align-items:end;
+
+padding:24px;
+
+font-size:24px;
+
+font-weight:700;
+
+transition:.35s;
+
+}
+
+.category-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+/* ======================================================
+   COURSES
+====================================================== */
+
+.courses-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:24px;
+
+}
+
+.course-card{
+
+overflow:hidden;
+
+border-radius:28px;
+
+background:var(--glass);
+
+border:1px solid var(--border);
+
+}
+
+.course-card img{
+
+height:260px;
+
+width:100%;
+
+object-fit:cover;
+
+}
+
+.course-content{
+
+padding:30px;
+
+}
+
+/* ======================================================
+   INSTRUCTOR
+====================================================== */
+
+.instructor-grid{
+
+display:grid;
+
+grid-template-columns:
+4fr 8fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.instructor-photo img{
+
+border-radius:32px;
+
+}
+
+/* ======================================================
+   GALLERY
+====================================================== */
+
+.gallery-grid{
+
+columns:3;
+
+column-gap:24px;
+
+}
+
+.gallery-grid div{
+
+height:280px;
+
+margin-bottom:24px;
+
+border-radius:24px;
+
+background:var(--surface);
+
+break-inside:avoid;
+
+}
+
+/* ======================================================
+   TESTIMONIAL
+====================================================== */
+
+.testimonial-card{
+
+max-width:900px;
+
+margin:auto;
+
+padding:50px;
+
+text-align:center;
+
+border-radius:28px;
+
+background:var(--glass);
+
+border:1px solid var(--border);
+
+}
+
+/* ======================================================
+   FAQ
+====================================================== */
+
+.faq{
+
+max-width:900px;
+
+margin:auto;
+
+}
+
+.faq-item{
+
+margin-bottom:20px;
+
+border-radius:20px;
+
+overflow:hidden;
+
+background:var(--glass);
+
+border:1px solid var(--border);
+
+}
+
+.faq-item button{
+
+width:100%;
+
+padding:24px;
+
+text-align:right;
+
+font-size:18px;
+
+}
+
+.faq-item div{
+
+padding:0 24px 24px;
+
+}
+
+/* ======================================================
+   CTA
+====================================================== */
+
+.cta-box{
+
+padding:100px;
+
+text-align:center;
+
+border-radius:40px;
+
+background:
+linear-gradient(
+135deg,
+rgba(0,163,255,.15),
+rgba(0,255,209,.08)
+);
+
+border:1px solid var(--border);
+
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+.footer{
+
+padding:100px 0 60px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:40px;
+
+}
+
+.footer-grid a{
+
+display:block;
+
+margin-top:12px;
+
+color:var(--text-secondary);
+
+}
